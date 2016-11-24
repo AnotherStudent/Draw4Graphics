@@ -1,0 +1,184 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Graphics'
+  ClientHeight = 480
+  ClientWidth = 652
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Disp: TPaintBox
+    Align = Client
+    ClipChildren = True
+    Margins.Left = 5.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 6.000000000000000000
+    Margins.Bottom = 6.000000000000000000
+    Size.Width = 641.000000000000000000
+    Size.Height = 437.000000000000000000
+    Size.PlatformDefault = False
+    OnMouseDown = DispMouseDown
+    OnMouseMove = DispMouseMove
+    OnMouseUp = DispMouseUp
+    OnPaint = DispPaint
+  end
+  object Panel1: TPanel
+    Align = Bottom
+    Position.Y = 448.000000000000000000
+    Size.Width = 652.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'panelstyle'
+    TabOrder = 1
+    object nbMinX: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Cursor = crIBeam
+      Min = -1000.000000000000000000
+      Max = 1000.000000000000000000
+      Value = -10.000000000000000000
+      ValueType = Float
+      Position.X = 48.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = ParamsChange
+    end
+    object Label1: TLabel
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 37.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Min X:'
+    end
+    object Label2: TLabel
+      Position.X = 312.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 37.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Min Y:'
+    end
+    object nbMinY: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 7
+      Cursor = crIBeam
+      Min = -1000.000000000000000000
+      Max = 1000.000000000000000000
+      Value = -7.000000000000000000
+      ValueType = Float
+      Position.X = 352.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = ParamsChange
+    end
+    object Label3: TLabel
+      Position.X = 104.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 37.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Max X:'
+    end
+    object nbMaxX: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Cursor = crIBeam
+      Min = -1000.000000000000000000
+      Max = 1000.000000000000000000
+      Value = 10.000000000000000000
+      ValueType = Float
+      Position.X = 144.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = ParamsChange
+    end
+    object Label4: TLabel
+      Position.X = 408.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 37.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Max Y:'
+    end
+    object nbMaxY: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Cursor = crIBeam
+      Min = -1000.000000000000000000
+      Max = 1000.000000000000000000
+      Value = 7.000000000000000000
+      ValueType = Float
+      Position.X = 448.000000000000000000
+      Position.Y = 5.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = ParamsChange
+    end
+    object Label5: TLabel
+      Position.X = 200.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 37.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Dot X:'
+    end
+    object nbDotX: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Cursor = crIBeam
+      Min = 0.009999999776482582
+      Max = 1000.000000000000000000
+      Value = 0.500000000000000000
+      ValueType = Float
+      Position.X = 240.000000000000000000
+      Position.Y = 5.000000000000000000
+      HorzIncrement = 0.100000001490116100
+      VertIncrement = 1.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = ParamsChange
+    end
+    object Label6: TLabel
+      Position.X = 504.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 37.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.WordWrap = False
+      Text = 'Dot Y:'
+    end
+    object nbDotY: TNumberBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      Cursor = crIBeam
+      Min = 0.009999999776482582
+      Max = 1000.000000000000000000
+      Value = 0.500000000000000000
+      ValueType = Float
+      Position.X = 544.000000000000000000
+      Position.Y = 5.000000000000000000
+      HorzIncrement = 0.100000001490116100
+      VertIncrement = 1.000000000000000000
+      Size.Width = 49.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      OnChange = ParamsChange
+    end
+  end
+end
