@@ -243,7 +243,7 @@ begin
   DrawFunction(Canvas, TAlphaColorRec.Green,
     function(X: Single; var Y: Single): Boolean
     begin
-      Result := X <> 0;
+      Result := Cos(X) <> 0;
       if Result then
         Y := Sin(X) / Cos(X);
     end);
